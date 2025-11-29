@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center_vertical">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -12,36 +13,54 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OpenRouter API Key"/>
+
     <EditText
         android:id="@+id/apiKeyInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="sk-or-..."
         android:inputType="textPassword"/>
+
     <Button
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save Key"
         android:layout_marginTop="16dp"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#CCCCCC"
         android:layout_marginVertical="24dp"/>
+
     <Button
         android:id="@+id/permissionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1. Grant Audio Permissions"/>
+
     <Button
         android:id="@+id/setServiceButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="2. Enable Voice Service"
         android:layout_marginTop="8dp"/>
+
+    <!-- This is the new instruction box -->
+    <TextView
+        android:id="@+id/instructionsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:background="#EEEEEE"
+        android:textColor="#333333"
+        android:text="Detecting device..."
+        android:textSize="14sp"/>
 </LinearLayout>
