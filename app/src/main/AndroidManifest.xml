@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
 
+        <!-- THIS IS THE FIX: BIND_SPEECH_RECOGNITION -->
         <service
             android:name=".VoiceInputService"
             android:exported="true"
