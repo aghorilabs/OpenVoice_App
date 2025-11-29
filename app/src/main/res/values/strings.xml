@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OpenVoice</string>
+    <string name="service_name">OpenVoice Service</string>
+</resources>
