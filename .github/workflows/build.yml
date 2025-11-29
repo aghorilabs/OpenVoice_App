@@ -26,13 +26,18 @@ jobs:
           
       - name: Build Debug APK
         run: gradle assembleDebug
+
+      # --- NEW STEP: RENAME THE FILE ---
+      - name: Rename APK
+        run: mv app/build/outputs/apk/debug/app-debug.apk app/build/outputs/apk/debug/OpenVoice-v1.0.${{ github.run_number }}.apk
         
-      # This step creates the Release and attaches the APK
+      # Create a permanent Release on GitHub with the APK
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v1.0.${{ github.run_number }}
           name: Release v1.0.${{ github.run_number }}
-          files: app/build/outputs/apk/debug/app-debug.apk
+          # Point to the NEW name
+          files: app/build/outputs/apk/debug/OpenVoice-v1.0.${{ github.run_number }}.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
